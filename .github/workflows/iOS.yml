@@ -1,7 +1,7 @@
 name: iOS
 
 on:
-  release
+  release:
   push:
     branches: [ master ]
   pull_request:
