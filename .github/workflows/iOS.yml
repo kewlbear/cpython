@@ -1,8 +1,7 @@
 name: iOS
 
 on:
-  release:
-    types: [edited]
+  release
 #   push:
 #     branches: [ master ]
 #   pull_request:
