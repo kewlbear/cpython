@@ -2,6 +2,7 @@ name: iOS
 
 on:
   release:
+    types: [edited]
   push:
     branches: [ master ]
   pull_request:
