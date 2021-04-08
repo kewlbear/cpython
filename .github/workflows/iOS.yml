@@ -16,7 +16,9 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - run: brew install openssl
-    - run: EXTRA_CONFIGURE_FLAGS_OSX=-with-openssl=/usr/local/Cellar/openssl@1.1/1.1.1k/ sh ./downloadAndCompile.sh
+    - run: sh ./downloadAndCompile.sh
+      env:
+        EXTRA_CONFIGURE_FLAGS_OSX: -with-openssl=/usr/local/Cellar/openssl@1.1/1.1.1k/
     - run: ls -lR > ls.log
     - uses: actions/upload-artifact@v2
       with:
