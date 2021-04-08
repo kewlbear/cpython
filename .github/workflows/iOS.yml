@@ -1,0 +1,25 @@
+name: iOS
+
+on:
+  release:
+    types: [published]
+  push:
+    branches: [ iOS ]
+  pull_request:
+    branches: [ iOS ]
+
+jobs:
+  build:
+
+    runs-on: macos-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build
+      run: sh ./downloadAndCompile.sh
+    - run: ls -lR > ls.log
+    - uses: actions/upload-artifact@v2
+      with:
+        name: logs
+        path: |
+          *.log
