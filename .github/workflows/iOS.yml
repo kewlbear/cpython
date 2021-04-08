@@ -2,10 +2,10 @@ name: iOS
 
 on:
   release
-#   push:
-#     branches: [ master ]
-#   pull_request:
-#     branches: [ master ]
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master 3.9 ]
 
 jobs:
   build:
