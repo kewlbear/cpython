@@ -15,7 +15,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - run: brew install openssl
+    - run: brew install openssl zmq
     - run: sh ./downloadAndCompile.sh
       env:
         EXTRA_CONFIGURE_FLAGS_OSX: -with-openssl=/usr/local/Cellar/openssl@1.1/1.1.1k/
